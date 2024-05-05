@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+  <style>
+  body{
+    background: aliceblue;
+  }
+  h1{
+    text-align: center;
+    backdrop-filter: blur(10px);
+    color: dodgerblue;
+    border-radius: 30px;
+    margin-top: -20px;
+    width: 50%;
+    margin-left: 5px;
+    border-bottom: 3px dashed teal;
+  }
+  div{
+    text-align: left;
+    margin: 0;
+  }
+  @keyframes images{
+    0%{background-image: url(ace.jpeg);}
+    10%{background-image: url(aest.jpeg);}
+    20%{background-image: url(boib.jpeg);}
+    30%{background-image: url(celft.jpeg);}
+    40%{background-image: url(Dance.jpeg);}
+    50%{background-image: url(dreams.jpeg);}
+    60%{background-image: url(enit.jpeg);}
+    70%{background-image: url(est.jpeg);}
+    80%{background-image: url(four.jpeg);}
+    90%{background-image: url(glowrock.jpeg);}
+    100%{background-image: url(name.jpeg);}
+  }
+.morn::before {
+  content: ""; 
+  background-size: 100% 100%; 
+  background-image: url(g1.jpg);
+  margin: 0;
+  height: 200px;
+  width: 100%;
+  display: inline-block; 
+  position: relative;
+  z-index: -1;
+  animation:images 120s linear infinite;
+}
+p:nth-child(even){
+  background: magenta;
+}
+  p::first-line{
+    color: white;
+    background: teal;
+  }
+  p::first-letter{
+    font-size: 30px;
+    color: black;
+    text-decoration: bold;
+  }
+  .hir{
+    width: 90%;
+    align-self: center;
+    color: teal;
+  }
+  @media screen and (min-width: 500px){
+    p{ 
+      width: 50%;
+      height: 50%;
+      float: left;
+    }
+    p:nth-child(odd){
+     background: teal; 
+    }
+    h1{
+      text-align: center;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="morn">
+    <h1 id="digit"></h1>
+  </div>
+  <hr class="hir">
+  <p>Hello World and People. This is the Tistic Webs Generation of absolute Glory. Praise be to the Lord...</p>
+  
+  <p>Hello World and People. This is the Tistic Webs Generation of absolute Glory. Praise be to the Lord...</p>
+
+  <p>Hello World and People. This is the Tistic Webs Generation of absolute Glory. Praise be to the Lord...</p>
+
+  <p>Hello World and People. This is the Tistic Webs Generation of absolute Glory. Praise be to the Lord...</p>
+  <script>
+  function clockit(){
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2,"0");
+    const ours = hours - 12;
+    const minutes = now.getMinutes().toString().padStart(2,"0");
+    const seconds = now.getSeconds().toString().padStart(2,"0");
+    let timestring = `${ours}:${minutes}:${seconds}`;
+    document.getElementById("digit").textContent = timestring;
+  }
+  
+  setInterval(clockit, 1000);
+  clockit();
+  </script>
+</body>
+</html>
